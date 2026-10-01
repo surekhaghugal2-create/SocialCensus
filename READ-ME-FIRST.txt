@@ -1,0 +1,56 @@
+SOCIAL CENSUS - CLEAN CLIENT + INSTAGRAM ANALYTICS WORKFLOW
+==========================================================
+
+WHAT IS FIXED IN THIS ZIP
+-------------------------
+1. Clients menu is visible in the left sidebar.
+2. Clients page opens the existing Client Manager.
+3. You can create clients, edit clients, assign team members, and assign connected social accounts.
+4. Clients is available in desktop navigation, mobile navigation, top page title, and command search.
+5. Local app URL and OAuth callback examples use port 3002.
+6. Existing SQLite database is kept in db/custom.db.
+
+FIRST RUN
+---------
+1. Extract this ZIP completely.
+2. Open the social-census folder in VS Code.
+3. Open Terminal.
+4. Run:
+       npm install
+5. Then run:
+       npm run dev
+6. Open:
+       http://localhost:3002
+
+EASIER WINDOWS METHOD
+---------------------
+After extracting, double-click:
+       START-SOCIAL-CENSUS.bat
+
+CLIENT + INSTAGRAM WORKFLOW
+---------------------------
+A. Login to Social Census.
+B. Click Clients in the left menu.
+C. Click Add client.
+D. Enter the client name and click Create client.
+E. Go to Settings.
+F. In Instagram integration, enter your Meta/Instagram App ID and App Secret.
+G. Add this exact redirect URI inside the Meta developer app:
+       http://localhost:3002/api/oauth/instagram/callback
+H. Click Save integration.
+I. Go to Accounts -> Connect account -> Instagram.
+J. Complete Instagram/Meta authorization.
+K. Return to Clients.
+L. Edit the client and tick the connected Instagram account.
+M. Click Save assignments.
+N. Go to Analytics.
+O. Select the client from the All clients filter.
+P. Click Sync Instagram / Sync now.
+Q. Use 7 days / 30 days / 90 days / Custom to review analytics records.
+
+IMPORTANT
+---------
+- Instagram must be a professional Business or Creator account for Insights.
+- Do not close the terminal while Social Census is running.
+- Do not run npm run db:reset unless you intentionally want to erase the local database.
+- Provider App Secret is sensitive. Do not share it publicly.
